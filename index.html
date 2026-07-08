@@ -1,44 +1,81 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Happy 6th Birthday Thanu</title>
-<style>
-body{margin:0;font-family:Arial,sans-serif;background:linear-gradient(135deg,#ffb6d9,#ffdff2);color:#fff;text-align:center;overflow-x:hidden}
-.hero{padding:60px 20px}
-h1{font-size:3em;margin:.2em}
-.card{max-width:900px;margin:20px auto;background:rgba(255,255,255,.15);padding:20px;border-radius:20px}
-#count{font-size:2em;font-weight:bold}
-.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
-.gallery img{width:100%;border-radius:14px}
-footer{padding:30px}
-</style></head>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🎂 Happy 6th Birthday Thanu 🎂</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+</head>
+
 <body>
+
 <div class="hero">
-<h1>🎂 Happy 6th Birthday Thanu 👑</h1>
-<p>Our Little Princess ❤️</p>
-<div id="count"></div>
+
+<div class="overlay">
+
+<h1>🎂 Happy 6th Birthday 🎂</h1>
+
+<h2>Our Princess Thanu 👑</h2>
+
+<p>
+May Allah bless you with happiness,
+health and a beautiful future.
+</p>
+
+<button id="startBtn">
+🎁 Open Memories
+</button>
+
 </div>
-<div class="card">
-<h2>Photo Gallery</h2>
-<p>Place Thanu's photos inside an <b>images</b> folder and rename them as 1.jpg, 2.jpg, 3.jpg ...</p>
-<div class="gallery" id="gallery"></div>
+
 </div>
-<div class="card">
-<h2>Message</h2>
-<p>Happy Birthday, Thanu! May Allah bless you with happiness, health and success. We love you forever. ❤️<br>– Umma & Uppa</p>
+
+<section class="gallery">
+
+<h2>📸 Beautiful Memories</h2>
+
+<div class="grid">
+
+<img src="images/IMG_1249.JPG">
+<img src="images/IMG_1451.JPG">
+<img src="images/IMG_1459.JPG">
+<img src="images/IMG_1465.JPG">
+<img src="images/IMG_1485.JPG">
+<img src="images/IMG_1548.JPG">
+<img src="images/IMG_1886.JPG">
+<img src="images/IMG_1952.JPG">
+<img src="images/IMG_20200811_195838.jpg">
+<img src="images/b846c3d8-be40-41cf-b98c-f3c71583800b.jpg">
+
 </div>
-<footer>Made with ❤️ for Thanu</footer>
-<script>
-const bday=new Date("2020-07-09T13:31:00");
-const now=new Date();
-document.getElementById("count").innerText=
-"Born: "+bday.toLocaleString()+" • Today we celebrate your 6th Birthday! 🎉";
-const g=document.getElementById("gallery");
-for(let i=1;i<=20;i++){
- let img=new Image();
- img.src="images/"+i+".jpg";
- img.onerror=()=>img.remove();
- g.appendChild(img);
-}
-</script>
-</body></html>
+
+</section>
+
+<section class="wish">
+
+<h2>❤️ Happy Birthday ❤️</h2>
+
+<p>
+
+Every smile of yours fills our hearts with joy.
+
+May Allah protect you,
+guide you and bless you always.
+
+Happy Birthday Our Princess.
+
+🎂🎈❤️
+
+</p>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
