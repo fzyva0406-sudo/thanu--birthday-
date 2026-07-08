@@ -82,3 +82,27 @@ musicBtn.addEventListener("click", () => {
     musicBtn.innerHTML = "🎵 Play Music";
   }
 });
+// Auto Slideshow
+const slides = document.querySelectorAll(".grid img");
+
+let current = 0;
+
+function autoSlide() {
+  slides.forEach((img) => {
+    img.style.opacity = "0.4";
+    img.style.transform = "scale(0.95)";
+  });
+
+  slides[current].style.opacity = "1";
+  slides[current].style.transform = "scale(1.08)";
+
+  current++;
+
+  if (current >= slides.length) {
+    current = 0;
+  }
+}
+
+setInterval(autoSlide, 2500);
+
+autoSlide();
