@@ -125,3 +125,19 @@ font-size:1rem;
 }
 
 }
+.gallery,
+.wish{
+    opacity:0;
+    transform:translateY(40px);
+    transition:all .8s ease;
+}
+
+.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.zoom{
+    transform:scale(1.15);
+    transition:.4s;
+}
