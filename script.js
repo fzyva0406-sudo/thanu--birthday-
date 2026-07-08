@@ -28,3 +28,28 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll(".gallery, .wish").forEach((el) => {
   observer.observe(el);
 });
+// Birthday Confetti
+window.addEventListener("load", () => {
+  const duration = 5000;
+  const end = Date.now() + duration;
+
+  (function frame() {
+    confetti({
+      particleCount: 5,
+      angle: 60,
+      spread: 70,
+      origin: { x: 0 }
+    });
+
+    confetti({
+      particleCount: 5,
+      angle: 120,
+      spread: 70,
+      origin: { x: 1 }
+    });
+
+    if (Date.now() < end) {
+      requestAnimationFrame(frame);
+    }
+  })();
+});
