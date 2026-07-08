@@ -226,3 +226,6 @@ z-index:1000;
 #musicBtn:hover{
 transform:scale(1.08);
 }
+.grid img{
+transition:all .6s ease;
+}
