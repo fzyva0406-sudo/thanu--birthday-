@@ -141,3 +141,40 @@ font-size:1rem;
     transform:scale(1.15);
     transition:.4s;
 }
+/* Floating Balloons */
+
+.balloon{
+position:fixed;
+bottom:-150px;
+width:60px;
+height:80px;
+border-radius:50%;
+opacity:.8;
+animation:floatUp 12s linear infinite;
+z-index:999;
+}
+
+.balloon::after{
+content:"";
+position:absolute;
+width:2px;
+height:60px;
+background:#fff;
+left:50%;
+top:80px;
+}
+
+.red{background:#ff4d4d;left:10%;}
+.blue{background:#4da6ff;left:30%;}
+.green{background:#33cc66;left:50%;}
+.yellow{background:#ffd633;left:70%;}
+.pink{background:#ff66cc;left:90%;}
+
+@keyframes floatUp{
+0%{
+transform:translateY(0);
+}
+100%{
+transform:translateY(-120vh);
+}
+}
