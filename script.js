@@ -55,7 +55,26 @@ window.addEventListener("load", () => {
 });
 // Floating Hearts
 const hearts = document.querySelector(".hearts");
+const enterBtn = document.getElementById("enterBtn");
 
+if (enterBtn) {
+  enterBtn.addEventListener("click", () => {
+    document.getElementById("welcomeScreen").style.display = "none";
+
+    if (typeof confetti === "function") {
+      confetti({
+        particleCount: 250,
+        spread: 120,
+        origin: { y: 0.6 }
+      });
+    }
+
+    const music = document.getElementById("bgMusic");
+    if (music) {
+      music.play().catch(() => {});
+    }
+  });
+}
 setInterval(() => {
   const heart = document.createElement("div");
   heart.className = "heart";
