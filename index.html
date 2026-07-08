@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Happy 6th Birthday Thanu</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:linear-gradient(135deg,#ffb6d9,#ffdff2);color:#fff;text-align:center;overflow-x:hidden}
+.hero{padding:60px 20px}
+h1{font-size:3em;margin:.2em}
+.card{max-width:900px;margin:20px auto;background:rgba(255,255,255,.15);padding:20px;border-radius:20px}
+#count{font-size:2em;font-weight:bold}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+.gallery img{width:100%;border-radius:14px}
+footer{padding:30px}
+</style></head>
+<body>
+<div class="hero">
+<h1>🎂 Happy 6th Birthday Thanu 👑</h1>
+<p>Our Little Princess ❤️</p>
+<div id="count"></div>
+</div>
+<div class="card">
+<h2>Photo Gallery</h2>
+<p>Place Thanu's photos inside an <b>images</b> folder and rename them as 1.jpg, 2.jpg, 3.jpg ...</p>
+<div class="gallery" id="gallery"></div>
+</div>
+<div class="card">
+<h2>Message</h2>
+<p>Happy Birthday, Thanu! May Allah bless you with happiness, health and success. We love you forever. ❤️<br>– Umma & Uppa</p>
+</div>
+<footer>Made with ❤️ for Thanu</footer>
+<script>
+const bday=new Date("2020-07-09T13:31:00");
+const now=new Date();
+document.getElementById("count").innerText=
+"Born: "+bday.toLocaleString()+" • Today we celebrate your 6th Birthday! 🎉";
+const g=document.getElementById("gallery");
+for(let i=1;i<=20;i++){
+ let img=new Image();
+ img.src="images/"+i+".jpg";
+ img.onerror=()=>img.remove();
+ g.appendChild(img);
+}
+</script>
+</body></html>
